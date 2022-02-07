@@ -1,23 +1,15 @@
 '''
 This file contains classes and methods for all details pertaining to one player. 
 '''
+class Player: 
 
-class Player:
-    def __init__(self) -> None:
-        self.alias = ""
+    def __init__(self,name:str, id:int) -> None:
+        self.playerID = id
+        self.gameID = -1
+        self.alias = name
         self.whomToGuess = -1 # this is the person this player will be guessing
         self.opponentGuess = -1 # this is the id of the person the opponent would be guessing.
-        print("Player Created") 
-
-    '''
-    Function to set player name. This would by server when a user logs in. 
-    '''
-    def setPlayerName(self,playerName :str) ->bool:
-
-        if self.alias == "":
-            self.alias = playerName
-            return True
-        return False
+        print("Created player with name :  ",name) 
 
     '''
     Function to set who the opponent Guesses
@@ -49,4 +41,15 @@ class Player:
         if(guessId == self.whomToGuess):
             print("Player {name}  has guessed right")
             return True
+        return False
+
+
+    '''
+    Function that assigns a game ID
+    '''
+    def assignGameId(self, id:int) ->bool:
+        if(self.gameID == -1 ):
+            self.gameID = id
+            return True
+
         return False
