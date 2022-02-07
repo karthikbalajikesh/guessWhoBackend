@@ -6,7 +6,8 @@ class Player:
     def __init__(self) -> None:
         self.alias = ""
         self.whomToGuess = -1 # this is the person this player will be guessing
-        self.opponentGuess = -1 # this is the id of the person the opponent would be guessing. 
+        self.opponentGuess = -1 # this is the id of the person the opponent would be guessing.
+        print("Player Created") 
 
     '''
     Function to set player name. This would by server when a user logs in. 

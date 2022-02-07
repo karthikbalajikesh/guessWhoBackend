@@ -1,11 +1,15 @@
 from flask import Flask
+from src.player import Player
+
+playerList = []
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hellllooooo World"
+    playerList.append(Player())
+    return "Player Created"
 
 
 if (__name__ == '__main__'):
-    app.run(debug=True)
+    app.run(debug=False)
