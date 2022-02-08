@@ -42,7 +42,7 @@ def generateGameCandidate(playerID:int) ->bool :
         activeGameCandidateList[getNextGameCandidateNumber()] =  \
              GameCandidate(activePlayerDict[playerID])
         return True
-        
+    print("Could not find player in playerPool")
     return False
 
 def generateGame(playerid:int, candidateID:int) ->bool :
